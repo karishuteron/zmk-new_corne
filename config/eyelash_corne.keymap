@@ -50,7 +50,7 @@
 &kp LCTRL  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                              &kp LGUI  &mo 1  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &kp RALT
             >;
-            sensor-bindings = <&mkp MOV_L>, <&mkp MOV_R>;
+            sensor-bindings = <&mkp MOV_L &mkp MOV_R>;
         };
 
         lower_layer {
