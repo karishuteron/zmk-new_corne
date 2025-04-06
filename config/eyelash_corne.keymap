@@ -36,6 +36,20 @@
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -54,20 +68,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
-        conditional_layers {
-            compatible = "zmk,conditional-layers";
-
-            bt_windows {
-                condition = &bt BT_SEL 0;
-                layers = <0>;
-            };
-
-            bt_mac {
-                condition = &bt BT_SEL 1;
-                layers = <4>;
-            };
-        };
 
         default_layer {     
             display-name = "QWERTY";
