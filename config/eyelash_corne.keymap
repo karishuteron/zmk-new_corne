@@ -60,16 +60,16 @@
 
             bt_windows {
                 condition = &bt BT_SEL 0;
-                if-layers = <0>;
+                layers = <0>;
             };
 
             bt_mac {
                 condition = &bt BT_SEL 1;
-                if-layers = <4>;
+                layers = <4>;
             };
         };
 
-        default_layer {
+        default_layer {     
             display-name = "QWERTY";
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E      &kp R  &kp T                               &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
