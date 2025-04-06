@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 /*
-
    &mmv_input_listener {
        input-processors = <&zip_xy_scaler 2 1>;
    };
@@ -16,7 +15,6 @@
    &msc_input_listener {
        input-processors = <&zip_xy_scaler 2 1>;
    };
-
  */
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -37,12 +35,12 @@
 
         bt_windows {
             condition = &bt BT_SEL 0;
-            layers = <0>; // Layer0 = Windows 用
+            layers = <0>;
         };
 
         bt_mac {
             condition = &bt BT_SEL 1;
-            layers = <4>; // Layer4 = Mac 用
+            layers = <4>;
         };
     };
 
@@ -66,9 +64,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E      &kp R  &kp T                               &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D      &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp RET
-&kp LSHIFT        &kp Z  &kp X  &kp C      &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
+                &kp TAB           &kp Q  &kp W  &kp E      &kp R  &kp T                               &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
+                &kp LEFT_CONTROL  &kp A  &kp S  &kp D      &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp RET
+                &kp LSHIFT        &kp Z  &kp X  &kp C      &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
                                 &kp LANG2  &mo 1  &lt 2 SPACE                                               &lt 3 ENTER  &kp SPACE  &kp LANG1
             >;
 
@@ -78,9 +76,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp ESCAPE  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0         &kp GRAVE
-&trans      &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SLASH        &kp MINUS        &kp EQUAL        &kp SEMI         &kp BACKSLASH  &kp PG_UP
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END        &kp PG_DN
+                &kp ESCAPE  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0         &kp GRAVE
+                &trans      &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SLASH        &kp MINUS        &kp EQUAL        &kp SEMI         &kp BACKSLASH  &kp PG_UP
+                &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END        &kp PG_DN
                                              &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
             >;
 
@@ -90,9 +88,9 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                            &msc SCRL_UP                     &none          &none           &kp UP_ARROW    &kp LBRC         &kp RBRC  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK     &mkp RCLK     &mkp MB4             &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME  &kp PG_UP
-&trans  &out OUT_USB  &out OUT_BLE  &none         &none         &mkp MB5   &trans                    &msc SCRL_DOWN                   &kp DELETE     &none           &none           &none            &kp END   &kp PAGE_DOWN
+                &trans  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                            &msc SCRL_UP                     &none          &none           &kp UP_ARROW    &kp LBRC         &kp RBRC  &kp BSPC
+                &trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK     &mkp RCLK     &mkp MB4             &msc SCRL_LEFT  &mkp LCLK       &msc SCRL_RIGHT  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME  &kp PG_UP
+                &trans  &out OUT_USB  &out OUT_BLE  &none         &none         &mkp MB5   &trans                    &msc SCRL_DOWN                   &kp DELETE     &none           &none           &none            &kp END   &kp PAGE_DOWN
                                     &kp LEFT_ALT  &kp LEFT_WIN  &kp SPACE                                                             &kp INSERT     &kp DEL         &kp RIGHT_ALT
             >;
 
@@ -102,9 +100,9 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                &studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
+                &trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+                &trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
@@ -114,9 +112,9 @@
         layer_4 {
             display-name = "MAC";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E      &kp R  &kp T                               &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_META     &kp A  &kp S  &kp D      &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp RET
-&kp LSHIFT        &kp Z  &kp X  &kp C      &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
+                &kp TAB           &kp Q  &kp W  &kp E      &kp R  &kp T                               &kp UP                &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
+                &kp LEFT_META     &kp A  &kp S  &kp D      &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp RET
+                &kp LSHIFT        &kp Z  &kp X  &kp C      &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp APOS
                                 &kp LANG2  &mo 1  &lt 2 SPACE                                               &lt 3 ENTER  &kp SPACE  &kp LANG1
             >;
 
@@ -124,3 +122,4 @@
         };
     };
 };
+                        
