@@ -14,4 +14,18 @@ include:
   - board: eyelash_corne_left
     shield: settings_reset
     #snippet: zmk-usb-logging
- 
+  - board: eyelash_corne_left
+    shield: default_layer
+    sensor-bindings: <&rot_kp UP_ARROW DOWN_ARROW>;
+  - board: eyelash_corne_left
+    shield: lower_layer
+    sensor-bindings: <&rot_kp LEFT_ARROW RIGHT_ARROW>;
+  - board: eyelash_corne_left
+    shield: raise_layer
+    sensor-bindings: <&rot_kp C_VOLUME_UP C_VOLUME_DOWN>;
+  - board: eyelash_corne_left
+    shield: layer_3
+    sensor-bindings: <&rot_kp C_VOLUME_UP C_VOLUME_DOWN>;
+  - board: eyelash_corne_left
+    shield: layer_4
+    sensor-bindings: <&rot_kp UP_ARROW DOWN_ARROW>;
