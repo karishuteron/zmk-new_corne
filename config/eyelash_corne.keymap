@@ -21,29 +21,6 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 / {
-    behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        bt_windows {
-            condition = &bt BT_SEL 0;
-            layers = <0>;
-        };
-
-        bt_mac {
-            condition = &bt BT_SEL 1;
-            layers = <4>;
-        };
-    };
-
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -58,8 +35,31 @@
         tap-ms = <30>;
     };
 
+    behaviors {
+        td0: td0 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
+
+        conditional_layers {
+            compatible = "zmk,conditional-layers";
+
+            bt_windows {
+                condition = &bt BT_SEL 0;
+                layers = <0>;
+            };
+
+            bt_mac {
+                condition = &bt BT_SEL 1;
+                layers = <4>;
+            };
+        };
 
         default_layer {
             display-name = "QWERTY";
@@ -122,4 +122,3 @@
         };
     };
 };
-                        
