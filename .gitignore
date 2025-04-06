@@ -1,5 +1,26 @@
+# ビルド成果物
 build/
-zmk/
+*.bin
+*.elf
+*.hex
+*.uf2
+
+# Zephyr/ZMK関連の依存
+zephyr/
 modules/
-tools/
-.west/
+west/
+*.pyc
+__pycache__/
+
+# ログやキャッシュ
+*.log
+*.swp
+*.swo
+*.zip
+
+# VS Code 設定など
+.vscode/
+*.code-workspace
+
+# サブモジュール（zmk-mouse-keyなど）も無視
+zmk-mouse-key/
