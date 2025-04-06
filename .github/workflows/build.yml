@@ -8,9 +8,24 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      board: eyelash_corne_left
-      shield: nice_view
-      config_path: config
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Set up Zephyr SDK
+        uses: zmkfirmware/zmk/actions/setup-zephyr-sdk@main
+
+      - name: Build firmware
+        run: |
+          west init -l config
+          west update
+          west zephyr-export
+          west build -s zmk/app -b eyelash_corne_left -- -DSHIELD=nice_view
