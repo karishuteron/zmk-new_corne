@@ -23,4 +23,4 @@ __pycache__/
 *.code-workspace
 
 # サブモジュール（zmk-mouse-keyなど）も無視
-zmk-mouse-key/
+zmk-mouse-key/.west/
