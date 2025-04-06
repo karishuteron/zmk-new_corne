@@ -59,13 +59,13 @@
             compatible = "zmk,conditional-layers";
 
             bt_windows {
-                if = <&bt BT_SEL 0>;
-                then = <0>;
+                condition = &bt BT_SEL 0;
+                if-layers = <0>;
             };
 
             bt_mac {
-                if = <&bt BT_SEL 1>;
-                then = <4>;
+                condition = &bt BT_SEL 1;
+                if-layers = <4>;
             };
         };
 
