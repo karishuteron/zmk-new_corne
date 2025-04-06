@@ -7,4 +7,21 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Remove previous .west config if it exists
+        run: |
+          if [ -d ".west" ]; then
+            rm -rf .west
+          fi
+
+      - name: Run ZMK build workflow
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
