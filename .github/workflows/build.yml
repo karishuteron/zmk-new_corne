@@ -10,5 +10,7 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
+      board: eyelash_corne_left
+      shield: nice_view
       config_path: config
     secrets: inherit
