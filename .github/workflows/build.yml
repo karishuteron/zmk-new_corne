@@ -10,6 +10,5 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
-      shield: "settings_reset"
-      board: "eyelash_corne_left"
+      config_path: config
     secrets: inherit
