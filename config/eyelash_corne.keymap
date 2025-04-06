@@ -32,8 +32,8 @@
         };
 
         rot_kp: rot_kp {
-            compatible = "zmk,behavior-rotate";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
     };
