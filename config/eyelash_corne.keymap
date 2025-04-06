@@ -100,7 +100,7 @@
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rot_kp UP_ARROW DOWN_ARROW>;
         };
     };
 };
