@@ -32,7 +32,7 @@ jobs:
           west build -s zmk/app -d build/left -b eyelash_corne_left -- -DSHIELD=nice_view -DZMK_CONFIG=config
 
       - name: Upload left firmware
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: zmk-left
           path: build/left/zephyr/zmk.uf2
