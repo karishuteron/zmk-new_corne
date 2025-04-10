@@ -69,7 +69,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 4>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 0>,
                 <&macro_wait_time 500>;
@@ -81,11 +80,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 1>,
-                <&macro_wait_time 500>,
-                <&tog_on 4>;
+                <&macro_wait_time 500>;
 
             label = "BT1";
         };
@@ -139,7 +136,7 @@
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&rot_kp UP_ARROW DOWN_ARROW>;
+            sensor-bindings = <&rot_kp LEFT_ARROW RIGHT>;
         };
 
         layer_4 {
